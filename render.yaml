@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mcp-controller
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: SLACK_BOT_TOKEN
+        value: your-slack-bot-token
